@@ -62,7 +62,6 @@ class _EUservClient(object):
 
     def __init__(self, username, password):
         self.auth = dict(login=username, password=password)
-        print('using auth:', self.auth)
         self.rpc = xmlrpclib.ServerProxy('https://api.euserv.net',
             # what a shame but they really use an self-signed cert
             context = ssl._create_unverified_context())
